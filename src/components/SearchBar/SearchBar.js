@@ -3,7 +3,9 @@ import './SearchBar.css';
 
 const SearchBar = (props) => {
   return (
+    
     <div className="searchBar">
+      <div>
       <input
         type="text"
         placeholder="city name"
@@ -32,9 +34,12 @@ const SearchBar = (props) => {
           onChange={props.handleUnit}
         />
         <label htmlFor="celcius">Celcius</label>
-      </div>
+          </div>
+          </div>
 
-      <button onClick={() => props.fetchData()}> Get Forcast </button>
+      <div className='forcast-button'>
+        <button onClick={() => props.fetchData()}> Get Forcast </button>
+        </div>
     </div>
   );
 };
